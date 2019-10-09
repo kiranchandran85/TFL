@@ -1,0 +1,29 @@
+.searchArea{
+    display: flex;
+    padding: 1rem 1rem;
+    .searchResults{
+        overflow: auto;
+    }
+
+    .noResult{
+        padding: 1rem 1rem;
+        color: rgb(95, 30, 30);
+    }
+
+  }
+
+  input{
+      width: 10rem;
+      height: 2rem;
+      border: 1px solid rgba(61, 50, 50, 0.301);
+  }
+
+  li{
+    text-align: left;
+    padding: 0.5rem;
+}
+ul {
+    list-style-type: square;
+    max-height: 750px;
+    overflow: scroll;
+  }

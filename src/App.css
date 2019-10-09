@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  /* display: grid;
+  grid-template-rows: 30% 70%;
+  grid-row-gap: 1rem; */
+}
+
+.c-container{
+  text-align: center;
+  display: flex;
+}
+
+.disruptions{
+  max-height: 200px;
+  min-height: 100px;
+}
