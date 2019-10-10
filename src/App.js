@@ -36,12 +36,12 @@ function App() {
     <div className="App">
       <Header brandText="Welcome to TFL Services" onClick={onClick} customMenu={customMenuItem()}></Header>
       <div className="c-container">
-        <main className="disruptions">
-          <Disrupt disrupt={disrupt} checked={checked}/>
-        </main>
-         <div className="search">
-          {Boolean(showSearch) &&<Search/>}
-        </div>
+      {Boolean(checked) && <main className="disruptions">
+        <Disrupt disrupt={disrupt} checked={checked}/>
+      </main>}
+      <div className="search">
+        {Boolean(showSearch) &&<Search/>}
+      </div>
       </div>
     </div>
   );

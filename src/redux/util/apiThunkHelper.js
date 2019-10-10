@@ -23,13 +23,15 @@ const thunkHelper = async (dispatch, {BEGIN, SUCCESS}, config, requestObject) =>
         result = await axios(config);
     } catch (err) {
         const fault = {
-            resposnse:err.response,
+            response:err.response,
             trigger: BEGIN
         };
 
         dispatch(ApiFault(fault, requestObject));
 
-        throw fault;
+        return;
+
+        // throw fault;
     }
 
     const {data} = result;

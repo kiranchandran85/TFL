@@ -5,7 +5,8 @@ import {ServicesActionTypes} from './services.action';
 export const INITIAL_STATE = new Immutable({
     services: [],
     isLoading: false,
-    isLoaded: false
+    isLoaded: false,
+    fault: null
 });
 
 export default (state = INITIAL_STATE, {payload = {}, type}) => {
@@ -22,7 +23,7 @@ export default (state = INITIAL_STATE, {payload = {}, type}) => {
 
         case FaultTypes.API_FAULT:
                     return state
-                        .set('fault', payload)
+                        .set('fault', payload.response)
                         .set('isLoaded', true)
                         .set('isLoading', false);      
         default:

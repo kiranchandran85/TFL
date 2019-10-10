@@ -1,15 +1,18 @@
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
-import {SearchRoutes} from '../../redux/search/search.action';
-import {Fault, Routes} from '../../redux/search/search.selectors';
+import {CachedRoutes, SearchRoutes} from '../../redux/search/search.action';
+import {Fault, Routes, RoutesItemsIsLoaded, SearchTerms} from '../../redux/search/search.selectors';
 import Search from './search';
 
 
 const mapStateToProps = createStructuredSelector({
     apiFault: Fault,
-    routes: Routes
+    isLoaded: RoutesItemsIsLoaded,
+    routes: Routes,
+    lastSearchTerms: SearchTerms
 });
 const mapActionsToProps = {
+    cachedRoutes: CachedRoutes,
     searchRoutes: SearchRoutes
 };
 

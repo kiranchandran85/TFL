@@ -5,4 +5,15 @@
         color:$accent-primary;
         font-size: 2rem;
     }
+    &__error{
+        background-color: $error-color;
+        color: $error-message-color;
+        max-width: 30rem;
+    }
+
+    &__menuBar{
+        display: flex;
+        flex-direction: column;
+        max-width: 1rem;
+    }
 }

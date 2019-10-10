@@ -6,7 +6,11 @@ export const ServicesClient = (store) => {
     return pathOr([], ['servicesClient'], store);
 };
 
-
+export const Fault = createSelector([
+    ServicesClient
+], (store) => {
+    return pathOr(null, ['fault'], store);
+});
 
 export const ServicesItems = createSelector([
     ServicesClient
@@ -35,7 +39,3 @@ export const ServicesItemsIsLoaded = createSelector([
     return searchResults !== [] && !isLoading;
 });
 
-export const Fault = createSelector([
-], (store) => {
-    return pathOr(null, ['fault'], store);
-});
