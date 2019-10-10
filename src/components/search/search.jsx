@@ -46,7 +46,7 @@ class Search extends Component {
               {Boolean(this.state.searchVal && this.props.routes.length) && this.props.routes.map((route) => {
                 const item = `${route.id.split('_')[1]} ${route.commonName} (${route.lat}, ${route.lon})`;
                 return (                
-                <li>{item}</li>
+                <li key={route.id}>{item}</li>
               );
               })}
             </ul>
